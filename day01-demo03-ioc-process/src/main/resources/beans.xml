@@ -1,21 +1,31 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--    这是敷衍无参构照函数来实现-->
- <!--   <bean id="user" class="com.fengfang.domain.User">
-        <property name="name" value="liuxh"></property>
-    </bean>-->
+<!--   <bean id="user" class="com.fengfang.domain.User">
+       <property name="name" value="liuxh"></property>
+   </bean>-->
 <!--    使用有参构造函数:下标赋值-->
- <!--   <bean id="user" class="com.fengfang.domain.User">
-        <constructor-arg index="0" value="这是一个测试名称"></constructor-arg>
-    </bean>-->
-    <!--    使用有参构造函数:类型赋值，有多个参数会有问题不建议使用-->
- <!--   <bean id="user" class="com.fengfang.domain.User">
-        <constructor-arg type="java.lang.String" value="这是一个测试名称"></constructor-arg>
-    </bean>-->
+<!--   <bean id="user" class="com.fengfang.domain.User">
+       <constructor-arg index="0" value="这是一个测试名称"></constructor-arg>
+   </bean>-->
+<!--    使用有参构造函数:类型赋值，有多个参数会有问题不建议使用-->
+<!--   <bean id="user" class="com.fengfang.domain.User">
+       <constructor-arg type="java.lang.String" value="这是一个测试名称"></constructor-arg>
+   </bean>-->
 <!--    使用有参构造函数：参数名称赋值-->
-    <bean id="user" class="com.fengfang.domain.User">
-        <constructor-arg name="name" value="这是一个测试名称"></constructor-arg>
-    </bean>
+<bean id="user" class="com.fengfang.domain.User">
+    <constructor-arg name="name" value="这是一个测试名称"></constructor-arg>
+</bean>
+<!--    id 为bean的唯一标识符，也就是相当于我们学的对象名
+        class :bean对象对应的全限定类名：包名+类名
+        name :也是别名,可以取多个别名如：name='n1,n2'
+        property:
+            name:
+            value:
+-->
+<bean id="student" class="com.fengfang.domain.Student"></bean>
+<!--    设置user的别名为userAlias-->
+    <alias name="user" alias="userAlias"/>
 </beans>

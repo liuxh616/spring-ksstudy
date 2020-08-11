@@ -7,7 +7,9 @@ package com.fengfang.domain;
  **/
 public class Student {
     private String name;
-
+    public Student(){
+        System.out.println("这是Student无参构造函数！");
+    }
     public String getName() {
         return name;
     }
