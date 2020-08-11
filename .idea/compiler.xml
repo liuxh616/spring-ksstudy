@@ -8,8 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="day01-demo01-iocold" />
         <module name="day01-demo03-ioc-process" />
-        <module name="day01-demo02-ioc-process" />
         <module name="day01-demo02-ioc_hello" />
+        <module name="day01-demo02-ioc-process" />
       </profile>
     </annotationProcessing>
   </component>
