@@ -11,7 +11,7 @@
     <modules>
         <module>day01-demo01-iocold</module>
         <module>day01-demo02-ioc_hello</module>
-        <module>day01-demo02-ioc-process</module>
+        <module>day01-demo03-ioc-process</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
