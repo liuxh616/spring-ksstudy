@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    使用Spring来创建对象，在SPring中，这些都称为bean
+    bean等于对象，new hello()
+    Hello hello = new Hello();
+    类型 变量名 = new 类型（）；
+    id 变量名
+    class new 的对象
+    property：相当于对象中的属性设置
+-->
+    <bean id="hello" class="com.fengfang.dao.Hello" >
+        <property name="name" value="testaa"></property>
+    </bean>
+</beans>

@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="userDaoImpl" class="com.fengfang.dao.impl.UserDaoImpl"/>
+    <bean id="mySqlUserDaoImpl" class="com.fengfang.dao.impl.UserDaoMysqlImpl"/>
+    <bean id="oracleUserDaoImpl" class="com.fengfang.dao.impl.UserDaoOracleImpl"/>
+    <bean id="userService" class="com.fengfang.service.impl.UserServiceImpl">
+<!--        这里配置使用什么dao实现类，就会调用什么类型的实现类
+            name属性值要和UserServiceImpl类中的变更名称相同，且要有set方法
+-->
+        <property name="userDao" ref="oracleUserDaoImpl"/>
+    </bean>
+
+</beans>
