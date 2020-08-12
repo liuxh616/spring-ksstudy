@@ -1,0 +1,13 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--  原来方式-->
+ <!--   <bean id="teacher" class="com.fengfang.domain.Teacher">
+        <constructor-arg name="name" value="刘东东"></constructor-arg>
+        <constructor-arg name="age" value="26"></constructor-arg>
+        <constructor-arg name="courseName" value="英语"></constructor-arg>
+    </bean>-->
+    <bean id="teacher" class="com.fengfang.domain.Teacher" c:name="刘东东" c:age="25" c:courseName="英语"></bean>
+</beans>

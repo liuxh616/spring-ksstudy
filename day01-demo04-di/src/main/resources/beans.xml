@@ -1,0 +1,61 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="student" class="com.fengfang.domain.Student">
+<!--        普通类型注入-->
+        <property name="name" value="aaron"></property>
+<!--        bean 注入，直接用ref-->
+        <property name="address" ref="address"/>
+<!--        数组注入-->
+        <property name="books">
+           <array>
+               <value>红楼梦</value>
+               <value>我的自白</value>
+               <value>活着</value>
+               <value>西游记</value>
+           </array>
+        </property>
+<!--        list注入-->
+        <property name="hobys">
+            <list>
+                <value>电影</value>
+                <value>唱歌</value>
+                <value>跳舞</value>
+            </list>
+        </property>
+<!--        map注入-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="123456789"></entry>
+                <entry key="银行卡" value="987654321"></entry>
+            </map>
+        </property>
+<!--        set 注入-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>王者</value>
+                <value>红警</value>
+            </set>
+        </property>
+<!--        properties注入-->
+        <property name="info">
+            <props>
+                <prop key="driver">val1</prop>
+                <prop key="url">val2</prop>
+                <prop key="username">val3</prop>
+                <prop key="password">val3</prop>
+            </props>
+        </property>
+        <property name="age" value="25"></property>
+<!--        对于null的注入-->
+        <property name="wife">
+            <null/>
+        </property>
+    </bean>
+<!--    定义一个新的bean-->
+    <bean id="address" class="com.fengfang.domain.Address">
+        <property name="address" value="广东省东莞市"></property>
+    </bean>
+</beans>

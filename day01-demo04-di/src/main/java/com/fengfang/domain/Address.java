@@ -9,6 +9,13 @@ package com.fengfang.domain;
 public class Address {
     private String address;
 
+    @Override
+    public String toString() {
+        return "Address{" +
+                "address='" + address + '\'' +
+                '}';
+    }
+
     public String getAddress() {
         return address;
     }

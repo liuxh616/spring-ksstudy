@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dog" class="com.fengfang.domain.Dog" >
+        <property name="name" value="旺财"></property>
+    </bean>
+    <bean id="cat" class="com.fengfang.domain.Cat">
+        <property name="name" value="黑猫区长"></property>
+    </bean>
+<!--    原来方式-->
+ <!--   <bean id="people" class="com.fengfang.domain.People">
+        <property name="name" value="小张"></property>
+        <property name="cat" ref="cat"></property>
+        <property name="dog" ref="dog"></property>
+    </bean>-->
+<!--    使用autowired-使用名称方式
+    byname  会自动在容器上下文中查找，和自己对象set方法后面的值对应的beanid，且
+            beanid的值唯一且这个bean需要和自动注入的属性的set方法的值一致
+    byType  会自动在容器上下文查找，但类型必须要唯一，若有重复，则会出错，不建议使用，建议使用byName
+-->
+    <bean id="people" class="com.fengfang.domain.People" autowire="byType">
+        <property name="name" value="小张"></property>
+    </bean>
+</beans>

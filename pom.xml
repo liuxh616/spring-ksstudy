@@ -13,6 +13,8 @@
         <module>day01-demo02-ioc_hello</module>
         <module>day01-demo03-ioc-process</module>
         <module>day01-demo04-di</module>
+        <module>day02-demo01-autowired</module>
+        <module>day02-demo02-anno</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
@@ -20,6 +22,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>5.2.8.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13</version>
         </dependency>
     </dependencies>
 
