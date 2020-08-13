@@ -7,10 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="day02-demo01-autowired" />
+        <module name="day02-demo05-springboot-test" />
         <module name="day01-demo04-di" />
+        <module name="day02-demo03-appconfig" />
         <module name="day01-demo02-ioc-process" />
         <module name="day01-demo02-ioc_hello" />
         <module name="day01-demo01-iocold" />
+        <module name="day03-dem01-proxy" />
         <module name="day01-demo03-ioc-process" />
         <module name="day02-demo02-anno" />
       </profile>
@@ -18,5 +21,10 @@
     <bytecodeTargetLevel>
       <module name="day01-demo01-autowired" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="day02-demo05-springboot-test" options="-parameters" />
+    </option>
   </component>
 </project>

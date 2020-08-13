@@ -9,6 +9,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/day01-demo03-ioc-process/pom.xml" />
+        <option value="$PROJECT_DIR$/day02-demo05-springboot-test/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

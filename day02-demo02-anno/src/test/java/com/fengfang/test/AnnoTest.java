@@ -1,4 +1,4 @@
-package com.fengfang;
+package com.fengfang.test;
 
 import com.fengfang.domain.User;
 import org.junit.Test;

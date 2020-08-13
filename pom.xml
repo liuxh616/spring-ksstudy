@@ -15,6 +15,8 @@
         <module>day01-demo04-di</module>
         <module>day02-demo01-autowired</module>
         <module>day02-demo02-anno</module>
+        <module>day02-demo03-appconfig</module>
+        <module>day03-dem01-proxy</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
