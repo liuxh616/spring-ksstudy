@@ -12,6 +12,7 @@
         <module name="day02-demo03-appconfig" />
         <module name="day01-demo02-ioc-process" />
         <module name="day01-demo02-ioc_hello" />
+        <module name="day03-demo02-aop" />
         <module name="day01-demo01-iocold" />
         <module name="day03-dem01-proxy" />
         <module name="day01-demo03-ioc-process" />

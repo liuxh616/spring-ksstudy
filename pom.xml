@@ -17,6 +17,7 @@
         <module>day02-demo02-anno</module>
         <module>day02-demo03-appconfig</module>
         <module>day03-dem01-proxy</module>
+        <module>day03-demo02-aop</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
