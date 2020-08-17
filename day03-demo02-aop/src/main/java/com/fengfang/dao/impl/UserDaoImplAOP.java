@@ -7,10 +7,11 @@ import com.fengfang.dao.IUserDao;
  * @Author liuxh
  * @Date 2020/8/14 16:29
  **/
-public class UserDaoImpl implements IUserDao {
+public class UserDaoImplAOP implements IUserDao {
     @Override
-    public void add() {
+    public int add() {
         System.out.println("这是用户新增的方法");
+        return 1;
     }
 
     @Override

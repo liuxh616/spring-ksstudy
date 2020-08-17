@@ -6,8 +6,11 @@ package com.fengfang.dao;
  * @Date 2020/8/14 16:29
  **/
 public interface IUserDao {
-    public void add();
+    public int add();
+
     public void delete();
+
     public void update();
+
     public void query();
 }

@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd">
-    　　<!--配置注解支持-->
-    <bean id="userDao" class="com.fengfang.dao.impl.UserDaoImpl"></bean>
-
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+<!--    注册bean-->
+    <bean id="userservice" class="com.fengfang.dao.impl.UserDaoImplAOP"/>
+    <bean id="log" class="com.fengfang.extent.Logger"/>
+    <bean id="afterLog" class="com.fengfang.extent.AfterLogger"></bean>
+    <!--配置aop支持、方式一-->
+<!--    <aop:config>
+&lt;!&ndash;        配置切入点&ndash;&gt;
+        <aop:pointcut id="pointcut" expression="execution(* com.fengfang.dao.impl.UserDaoImplAOP.*(..))"/>
+&lt;!&ndash;        执行环绕增强&ndash;&gt;
+        <aop:advisor advice-ref="log" pointcut-ref="pointcut"/>
+        <aop:advisor advice-ref="afterLog" pointcut-ref="pointcut"/>
+    </aop:config>-->
+<!--    方式二-->
+<!--    <bean id="diypointcut" class="com.fengfang.diy.DiyPointCut"/>
+    <aop:config>
+        <aop:aspect ref="diypointcut">
+            <aop:pointcut id="point" expression="execution(* com.fengfang.dao.impl.UserDaoImplAOP.*(..))"/>
+&lt;!&ndash;            设置通知&ndash;&gt;
+            <aop:before method="before" pointcut-ref="point"/>
+            <aop:after method="after" pointcut-ref="point"/>
+        </aop:aspect>
+    </aop:config>-->
+<!--    方式三，使用注解-->
+    <bean id="anno" class="com.fengfang.anno.AnnotationPointCut"></bean>
+<!--    开启注解支持-->
+    <aop:aspectj-autoproxy />
 </beans>

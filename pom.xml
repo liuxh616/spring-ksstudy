@@ -18,6 +18,7 @@
         <module>day02-demo03-appconfig</module>
         <module>day03-dem01-proxy</module>
         <module>day03-demo02-aop</module>
+        <module>day03-demo03-springmybatis</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
