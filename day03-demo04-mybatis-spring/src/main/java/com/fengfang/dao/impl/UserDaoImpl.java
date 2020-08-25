@@ -12,6 +12,9 @@ import java.util.List;
  * @Date 2020/8/18 15:11
  **/
 public class UserDaoImpl extends SqlSessionDaoSupport implements IUserDao {
+
+
+
     @Override
     public List<User> findall() {
         return getSqlSession().getMapper(IUserDao.class).findall();
