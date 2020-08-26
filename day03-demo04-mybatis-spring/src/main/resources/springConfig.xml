@@ -20,9 +20,6 @@
         <property name="configLocation" value="classpath:mybatisConfig.xml"/>
         <property name="mapperLocations" value="com/fengfang/dao/*.xml"></property>
     </bean>
-    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg index="0" ref="sqlSessionFactory"/>
-    </bean>
 <!--    配置声明式事务-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <constructor-arg name="dataSource" ref="datasource" />
