@@ -4,6 +4,7 @@ import com.fengfang.dao.IUserDao;
 import com.fengfang.domain.User;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 
+import javax.jws.soap.SOAPBinding;
 import java.util.List;
 
 /**
@@ -17,7 +18,11 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements IUserDao {
 
     @Override
     public List<User> findall() {
-        return getSqlSession().getMapper(IUserDao.class).findall();
+        User user = new User("刘和平", "123456");
+        IUserDao userDao = getSqlSession().getMapper(IUserDao.class);
+        userDao.addUser(user);
+        userDao.deleteUser(1);
+        return userDao.findall();
     }
 
     @Override

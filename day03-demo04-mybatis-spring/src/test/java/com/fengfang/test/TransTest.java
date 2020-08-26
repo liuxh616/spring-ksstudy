@@ -19,10 +19,8 @@ public class TransTest {
         IUserDao userdaoimpl = context.getBean("userdaoimpl", IUserDao.class);
         User user = new User("刘经和", "21311");
         userdaoimpl.addUser(user);
-        User user2 = new User("张开行", "236548");
-        userdaoimpl.addUser(user);
         //删除失败，但插入成功了，这不符合事务执行原则
-        int re = userdaoimpl.deleteUser(1);
+        int re = userdaoimpl.deleteUser(2);
 
 
     }

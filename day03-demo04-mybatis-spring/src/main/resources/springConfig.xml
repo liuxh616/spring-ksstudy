@@ -40,6 +40,8 @@
 <!--    配置事务切入-->
     <aop:config>
         <aop:pointcut id="pointcut" expression="execution(* com.fengfang.dao.impl.*.*(..))"/>
+        <aop:pointcut id="textPointcut" expression="execution(* com.fengfang.test.*.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="textPointcut"/>
     </aop:config>
 </beans>
